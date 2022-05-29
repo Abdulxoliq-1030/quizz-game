@@ -1,0 +1,246 @@
+* {
+  user-select: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+body .sign-in-zone {
+  width: 40%;
+  text-align: center;
+}
+body .sign-in-zone .form {
+  padding: 30px 40px;
+}
+body .sign-in-zone .form .form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  text-align: start;
+}
+body .sign-in-zone .form .form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+body .sign-in-zone .form .form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+body .sign-in-zone .form .form-control.success input {
+  border-color: #2ecc71;
+}
+body .sign-in-zone .form .form-control.success i.fa-check-circle {
+  visibility: visible;
+  color: #2ecc71;
+}
+body .sign-in-zone .form .form-control.error input {
+  border-color: #e74c3c;
+}
+body .sign-in-zone .form .form-control.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: #e74c3c;
+}
+body .sign-in-zone .form .form-control.error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+body .sign-in-zone .form .form-control i {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  visibility: hidden;
+}
+body .sign-in-zone .form .form-control small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+body .sign-in-zone .form button {
+  background-color: #295a29;
+  color: #fff;
+  border: 2px solid #295a29;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+body .degree-zone {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  width: 80%;
+}
+body .degree-zone .degre-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+}
+body .degree-zone button {
+  padding: 2.5rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: #295129;
+  color: #fff;
+}
+body .degree-zone button:active {
+  transform: scale(0.9);
+}
+body .game-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+body .game-zone .result-zone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-items: center;
+}
+body .game-zone .result-zone > div {
+  width: 400px;
+  height: 400px;
+  background-color: dodgerblue;
+  display: grid;
+  place-items: center;
+  padding: 0 2rem;
+  text-align: center;
+}
+body .game-zone .result-zone > div .row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+body .game-zone .result-zone > div .row .point-group {
+  height: 50px;
+  display: flex;
+  column-gap: 5px;
+  padding: 0.5rem;
+}
+body .game-zone .result-zone > div .row .point-group .point-result {
+  width: 50px;
+  color: #fff;
+  font-size: 30px;
+}
+body .game-zone .result-zone > div .row .point-group .point-result.point--success {
+  background-color: green;
+}
+body .game-zone .result-zone > div .row .point-group .point-result.point--fail {
+  background-color: red;
+}
+body .game-zone .result-zone > div .row .point-group .point-result.point--timeout {
+  background-color: black;
+}
+body .game-zone .result-zone > div .row .point-percent {
+  font-size: 30px;
+  color: #fff;
+}
+body .game-zone .result-zone > div .btn {
+  padding: 1rem 2rem;
+  font-size: 30px;
+}
+body .game-zone header {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+body .game-zone .quiz-zone {
+  padding: 1rem;
+  width: 800px;
+  height: 500px;
+  display: grid;
+  grid-template-rows: 0.2fr 1fr;
+}
+body .game-zone .quiz-zone .quiz {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  border: 1px solid lightblue;
+  background-color: #efed40;
+}
+body .game-zone .quiz-zone .quiz span {
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+body .game-zone .quiz-zone .quiz span:not(:nth-child(2)) {
+  background-color: red;
+  color: #fff;
+}
+body .game-zone .quiz-zone .answers {
+  display: flex;
+  flex-direction: column;
+}
+body .game-zone .quiz-zone .answers .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+}
+body .game-zone .quiz-zone .answers .row .answer {
+  font-size: 40px;
+  background-color: lightblue;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s linear;
+}
+body .game-zone .quiz-zone .answers .row .answer:active {
+  transform: scale(0.95);
+}
+body .game-zone .points {
+  width: 1200px;
+  height: 50px;
+  display: flex;
+  column-gap: 5px;
+  border: 1px solid lightblue;
+  padding: 0.5rem;
+}
+body .game-zone .points .point {
+  width: 50px;
+  color: #fff;
+}
+body .game-zone .points .point--success {
+  background-color: green;
+}
+body .game-zone .points .point--fail {
+  background-color: red;
+}
+body .game-zone .points .point--timeout {
+  background-color: black;
+}
+body .game-zone .new-game {
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-color: dodgerblue;
+  border-radius: 5px;
+  color: white;
+  font-size: 24px;
+  margin-top: 20px;
+}
+body .hide {
+  display: none !important;
+}

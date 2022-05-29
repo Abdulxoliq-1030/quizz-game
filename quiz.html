@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="quiz.css" />
+    <title>Quiz-app</title>
+  </head>
+  <body>
+  
+    <!-- DEGREE ZONE -->
+    <section class="degree-zone">
+      <h1 class="degre-title">QUIZ APP</h1>
+      <button class="degree-button">Easy</button>
+      <button class="degree-button">Medium</button>
+      <button class="degree-button">Hard</button>
+    </section>
+    <!-- /DEGREE ZONE -->
+
+    <!-- GAME ZONE -->
+    <section class="game-zone hide">
+      <div class="result-zone hide">
+        <div>
+          <h3>All results</h3>
+          <div class="row">
+            <div class="point-group">
+              <button class="point-result point--timeout" disabled>4</button>
+              <button class="point-result point--fail" disabled>3</button>
+            </div>
+            <div class="point-percent">46%</div>
+          </div>
+          <div class="row">
+            <div class="point-group">
+              <button class="point-result point--success" disabled>8</button>
+            </div>
+            <div class="point-percent">54%</div>
+          </div>
+          <button class="btn" id="btn-reset">reset</button>
+          <button class="btn" id="btn-show-answers">show results</button>
+        </div>
+      </div>
+      <header>
+        <h1 class="quiz-round"></h1>
+        <h1 class="timer">s</h1>
+      </header>
+      <div class="quiz-zone">
+        <div class="quiz">
+          <span class="first-number">1</span>
+          <span class="operation">+</span>
+          <span class="second-number">1</span>
+        </div>
+        <div class="answers">
+          <div class="row">
+            <div class="answer">1</div>
+            <div class="answer">2</div>
+          </div>
+          <div class="row">
+            <div class="answer">3</div>
+            <div class="answer">4</div>
+          </div>
+        </div>
+      </div>
+      <!-- POINTS -->
+      <div class="points"></div>
+      <!-- /POINTS -->
+      <button class="new-game hide">New Game</button>
+    </section>
+    <!-- /GAME ZONE -->
+  </body>
+  <script type="module" src="./quiz.js"></script>
+</html>
